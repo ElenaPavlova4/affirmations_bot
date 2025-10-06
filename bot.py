@@ -11,7 +11,8 @@ from telegram.ext import (
     CallbackQueryHandler, MessageHandler, ContextTypes, filters, AIORateLimiter
 )
 
-BOT_TOKEN = "8368966703:AAH6ITzlxfryVXPcLDRAHiSXHIeSixquToc"  # ← твой токен
+import os
+BOT_TOKEN = os.getenv("BOT_TOKEN")# ← твой токен
 DEFAULT_TZ = "Europe/Kyiv"
 DEFAULT_TIME = "09:00"
 USERS_FILE = Path("users.json")
